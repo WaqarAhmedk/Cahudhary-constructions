@@ -5,20 +5,48 @@ import Image from 'next/image';
 
 export default function HeroSectiopn() {
     return (
-        <Grid className='mt-20'>
-            <Container className='block  mb-10  sm:block  md:flex' >
+        <Grid sx={{
+            marginTop: '30px'
+        }}>
+            <Container sx={{
+                display: {
+                    xs: 'block',
+                    md: 'flex',
+                },
+                marginBottom: '20px',
+
+            }}  >
                 <Container className='hero-build-dream '>
                     BUILD YOUR DREAM PROPERTY WITH NEW EXPIRENCE
                 </Container>
-                <Container className='ml-10 mt-5'>
-                    <Typography className='text-xl text-white font-bold mb-2'>
+                <Container sx={{
+                    marginLeft: '20px',
+                    marginTop: '20px'
+                }}>
+                    <Typography sx={{
+                        fontSize: '20px',
+                        color: 'white',
+                        fontWeight: 'bold',
+                        marginBottom: '10px'
+                    }} >
                         About us
                     </Typography>
-                    <Typography className='text-gray-700 text-lg pr-5 text-start break-woords mb-3 '>
+                    <Typography sx={{
+                        color: 'gray',
+                        fontSize: '20px',
+                        textAlign: 'start',
+                        paddingRight: '7%',
+                        marginBottom: '10px',
+                    }} >
                         Drive performance and your cross-functional collabarations with easy-to-use dashboards and other ansd addd csadospadsakdw
                     </Typography>
                     <Container>
-                        <Typography className='text-lg text-white font-bold mb-2'>
+                        <Typography sx={{
+                            fontSize: '20px',
+                            color: 'white',
+                            fontWeight: 'bold',
+                            marginBottom: '5px'
+                        }} >
                             350+projects
                         </Typography>
 

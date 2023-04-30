@@ -45,6 +45,7 @@ export default function NavBar() {
             bgcolor: 'transparent',
             display: 'flex',
             borderBottom: '2px solid gray',
+            position: 'relative'
         }} >
             <Toolbar>
                 <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -83,8 +84,14 @@ export default function NavBar() {
                         ))}
                     </Menu>
                 </Box>
-                <Container className='w-10' sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                    <Container className='flex justify-between ' >
+                <Container sx={{
+                    flexGrow: 1, display: { xs: 'none', md: 'flex' }, width: '10px'
+                }}>
+                    <Container sx={{
+                        display: 'flex',
+                        justifyContent: 'Space-between',
+                        width: '30%'
+                    }}>
                         <Typography color={'#BCC0C3'}>
                             About
                         </Typography>
@@ -92,10 +99,17 @@ export default function NavBar() {
                             Projects
                         </Typography>
                     </Container>
-                    <Container className='flex justify-center'>
+                    <Container sx={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                    }} >
                         <Image src={LogoImage} alt='chaudghary-construction logo' className='logoimg' />
                     </Container>
-                    <Container className='flex justify-between '>
+                    <Container sx={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        width: '30%',
+                    }}>
                         <Typography color={'#BCC0C3'}>
                             Features
                         </Typography>
@@ -105,7 +119,8 @@ export default function NavBar() {
                     </Container>
                 </Container>
 
-                <Container className='ml-5 ' sx={{
+                <Container sx={{
+                    marginLeft: '10px',
                     display: { xs: 'flex', sm: 'flex', md: 'none' }
                 }}>
                     <Image src={LogoImage} alt='chaudghary-construction logo' className='logoimg' />
