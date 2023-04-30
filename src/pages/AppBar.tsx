@@ -41,9 +41,11 @@ export default function NavBar() {
 
 
 
-        <AppBar className='bg-transparent flex justify-between border-gray-700 border-b-2 ' style={{
-            position: 'relative'
-        }}>
+        <AppBar sx={{
+            bgcolor: 'transparent',
+            display: 'flex',
+            borderBottom: '2px solid gray',
+        }} >
             <Toolbar>
                 <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                     <IconButton
