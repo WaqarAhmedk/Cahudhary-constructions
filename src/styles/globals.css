@@ -17,11 +17,33 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0%;
+  padding: 0%;
+  background-color: #1A1E23;
+}
+
+
+
+.logoimg {
+
+  width: 50px;
+}
+
+
+/* hero section */
+
+
+.hero-build-dream {
+  font-size: 50px;
+  color: white;
+  padding-left: 5%;
+}
+
+.hero-img {
+  width: 100vw;
+
+  border-top-right-radius: 70px;
+  border-top-left-radius: 70px;
+  height: 500px;
+
 }
