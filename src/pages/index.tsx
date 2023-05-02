@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import NavBar from './AppBar';
 import HeroSectiopn from './herosection';
 import ChooseUs from './choseus';
+import OurServices from './ourservices';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -13,6 +14,7 @@ export default function Home() {
       <NavBar />
       <HeroSectiopn />
       <ChooseUs />
+      <OurServices />
 
     </div>
   )

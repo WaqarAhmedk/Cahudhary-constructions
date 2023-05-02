@@ -34,7 +34,7 @@ body {
 
 
 .hero-build-dream {
-  font-size: 50px;
+  font-size: 45px;
   color: white;
   padding-left: 5%;
 }
@@ -46,4 +46,43 @@ body {
   border-top-left-radius: 70px;
   height: 500px;
 
+}
+
+
+
+.service-img {
+  box-shadow: 10px 10px 10px #39474E
+}
+
+/* .bgcx:has(.service-img:hover) {
+  background-color: #81898d;
+}
+
+.bgcx:has(.txt:hover) {
+  background-color: #39474E;
+} */
+
+.txt {
+  rotate: -30deg
+}
+
+.txt:hover+.show {
+  display: block;
+
+}
+
+
+
+.bg-color:hover~.show {
+  display: block;
+}
+
+.bg-color:hover {
+  display: none;
+}
+
+
+
+.bg-color:hover+.txt {
+  display: none;
 }

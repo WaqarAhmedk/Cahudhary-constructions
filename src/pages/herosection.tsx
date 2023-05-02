@@ -2,11 +2,12 @@ import { Box, Container, Grid, Typography } from '@mui/material'
 import React from 'react';
 import HeroIMage from '../../public/images/herosection.webp'
 import Image from 'next/image';
-
+import { Roboto } from 'next/font/google';
 export default function HeroSectiopn() {
     return (
         <Grid sx={{
-            marginTop: '30px'
+            marginTop: '50px',
+            marginBottom: '20px'
         }}>
             <Container sx={{
                 display: {
@@ -16,7 +17,9 @@ export default function HeroSectiopn() {
                 marginBottom: '20px',
 
             }}  >
-                <Container className='hero-build-dream '>
+                <Container className='hero-build-dream ' sx={{
+                    fontFamily: 'Roboto',
+                }}>
                     BUILD YOUR DREAM PROPERTY WITH NEW EXPIRENCE
                 </Container>
                 <Container sx={{
@@ -27,7 +30,8 @@ export default function HeroSectiopn() {
                         fontSize: '20px',
                         color: 'white',
                         fontWeight: 'bold',
-                        marginBottom: '10px'
+                        marginBottom: '10px',
+                        fontFamily: 'Roboto',
                     }} >
                         About us
                     </Typography>
@@ -55,7 +59,9 @@ export default function HeroSectiopn() {
             </Container>
 
 
-            <Container className='mb-5 mt-5'>
+            <Container sx={{
+                marginTop: '40px'
+            }} >
                 <Image src={HeroIMage} alt='herosection image' className='hero-img' />
             </Container>
         </Grid>
