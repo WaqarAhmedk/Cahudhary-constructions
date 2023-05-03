@@ -4,6 +4,7 @@ import NavBar from './AppBar';
 import HeroSectiopn from './herosection';
 import ChooseUs from './choseus';
 import OurServices from './ourservices';
+import Projects from './projects';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -15,6 +16,7 @@ export default function Home() {
       <HeroSectiopn />
       <ChooseUs />
       <OurServices />
+      <Projects />
 
     </div>
   )

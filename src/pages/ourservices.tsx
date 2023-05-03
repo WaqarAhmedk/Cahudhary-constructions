@@ -34,13 +34,19 @@ let services = [{
 export default function OurServices() {
     return (
         <Box sx={{
-            backgroundColor: 'gray',
+            backgroundColor: '#F8F8F8',
             paddingBottom: '50px',
 
         }}>
 
             <Container >
-                <Typography >
+                <Typography sx={{
+                    fontSize: '40px',
+                    fontWeight: 'bold',
+                    fontFamily: 'Roboto',
+
+                    marginBottom: '50px'
+                }}>
                     Our Services
                 </Typography>
                 <Container sx={{
@@ -110,6 +116,7 @@ export default function OurServices() {
                                     width: '150px',
                                     wordWrap: 'break-word',
                                     color: 'white',
+                                    fontFamily: 'Roboto',
                                     overflowWrap: 'break-word',
 
                                     hyphens: 'manual',
@@ -147,7 +154,7 @@ export default function OurServices() {
                                         wordWrap: 'break-word',
                                         color: 'white',
                                         overflowWrap: 'break-word',
-
+                                        fontFamily: 'Roboto',
                                         hyphens: 'manual',
 
 
