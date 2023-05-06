@@ -114,16 +114,20 @@ export default function Footer() {
                 display: 'flex',
                 justifyContent: 'space-between',
                 marginBottom: '20px',
-                width: '50%'
+                width: '50%',
+
             }}>
                 <Box sx={{
-                    width: '50%'
+                    width: '50%', marginRight: '50%'
                 }}>
-                    <Typography>
-                        Chaudhary Const
+                    <Typography sx={{
+                        fontSize: '20px',
+                        fontWeight: 'bold', marginBottom: '10px'
+                    }}>
+                        Chaudhary Constructions
                     </Typography>
                     <Typography>
-                        main road ratta  dadyal Azad Kashmir
+                        main road ratta  dadyal , Azad Kashmir
                     </Typography>
                     <Typography>
                         email@gmail.com
@@ -132,7 +136,10 @@ export default function Footer() {
                 <Box sx={{
                     width: '50%'
                 }}>
-                    <Typography>
+                    <Typography sx={{
+                        fontSize: '20px',
+                        fontWeight: 'bold', marginBottom: '10px'
+                    }}>
                         Platform
                     </Typography>
                     <Typography>
@@ -157,12 +164,12 @@ export default function Footer() {
 
             }}>
                 <Box sx={{
-                    width: '50%', marginRight: '10%'
+                    width: '50%', marginRight: '50%'
 
                 }}>
                     <Typography sx={{
                         fontSize: '20px',
-                        fontWeight: 'bold'
+                        fontWeight: 'bold', marginBottom: '10px'
                     }}>
                         Platform
                     </Typography>
@@ -182,7 +189,10 @@ export default function Footer() {
                 <Box sx={{
                     width: '50%'
                 }}>
-                    <Typography>
+                    <Typography sx={{
+                        fontSize: '20px',
+                        fontWeight: 'bold', marginBottom: '10px'
+                    }}>
                         Platform
                     </Typography>
                     <Typography>
