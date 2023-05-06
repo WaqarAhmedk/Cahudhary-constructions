@@ -14,7 +14,7 @@ let services = [{
     image: s1,
 
 }, {
-    name: 'Interior design',
+    name: 'Interior-design',
     image: s1,
 
 }, {
@@ -92,7 +92,7 @@ export default function OurServices() {
 
                                         top: {
                                             xs: '0px',
-                                            sm: '5px', md: '25px'
+                                            sm: '0px', md: '25px'
                                         }, left: '20px',
                                         borderRadius: '50%',
                                         width: '210px',
@@ -109,9 +109,15 @@ export default function OurServices() {
 
                                 <Typography sx={{
                                     position: 'absolute',
-                                    top: '40%',
+                                    top: {
+                                        xs: '30%',
+                                        sm: '30%',
+                                        md: '40%',
+
+
+                                    },
                                     left: '20%',
-                                    fontSize: '30px',
+                                    fontSize: '25px',
                                     textAlign: 'center',
                                     width: '150px',
                                     wordWrap: 'break-word',
@@ -148,7 +154,7 @@ export default function OurServices() {
                                         position: 'absolute',
                                         top: '30%',
                                         left: '10%',
-                                        fontSize: '30px',
+                                        fontSize: '25px',
                                         textAlign: 'center',
                                         width: '150px',
                                         wordWrap: 'break-word',

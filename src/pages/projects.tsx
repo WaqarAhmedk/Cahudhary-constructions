@@ -10,13 +10,17 @@ import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import { green } from '@mui/material/colors';
+import { ArrowBackIosNewOutlined, ArrowBackIosNewRounded, ArrowForwardIosOutlined, ArrowRight, ArrowRightTwoTone } from '@mui/icons-material';
+
+
+
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
     {
         label: 'San Francisco – Oakland Bay Bridge, United States',
         imgPath:
-            'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+            'https://images.pexels.com/photos/1694360/pexels-photo-1694360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     },
     {
         label: 'Bird',
@@ -55,25 +59,73 @@ export default function Projects() {
     return (
         <Box sx={
             {
-                backgroundColor: 'white'
+                backgroundColor: 'white',
+                position: 'relative',
+                paddingBottom: '30px'
             }
         }>
 
 
-            <Container>
+            <Container
+            >
                 <Container sx={{
                     display: 'flex',
                     justifyContent: 'space-between'
                 }}>
-                    <Typography>
-                        Some Of Our Projects
-                    </Typography>
-                    <Typography>
-                        see all                    </Typography>
-                </Container>
+                    <Typography sx={{
+                        fontSize: '40px',
+                        fontWeight: 'bold',
+                        fontFamily: 'Roboto',
+                        marginTop: '20px',
 
-                <Container>
-                    <Box sx={{ maxWidth: '100%', flexGrow: 1, backgroundColor: 'green ' }}>
+                        marginBottom: '50px'
+                    }}>
+                        Some Completed Projects
+                    </Typography>
+
+                </Container>
+                <Button
+                    sx={{
+                        position: {
+                            sm: 'relative', md: 'absolute'
+                        }, top: '50%',
+                        left: '0%',
+
+
+                    }}
+                    size="large"
+                    onClick={handleBack}
+                    disabled={activeStep === 0}
+
+                >
+                    {theme.direction === 'rtl' ? (
+                        <ArrowBackIosNewOutlined />
+                    ) : <ArrowBackIosNewRounded />}
+                </Button>
+                <Button sx={{
+                    position: {
+                        sm: 'relative', md: 'absolute'
+                    },
+                    right: '0%',
+                    top: '50%',
+
+
+
+                }} size="small" onClick={handleNext}
+                    disabled={activeStep === maxSteps - 1}
+                >
+                    {theme.direction === 'rtl' ? (
+                        <ArrowForwardIosOutlined />
+                    ) : (
+                        <ArrowForwardIosOutlined />
+
+                    )}
+
+                </Button>
+
+                <Container >
+
+                    <Box sx={{ maxWidth: '100%', flexGrow: 1, }}>
                         <Paper
                             square
                             elevation={0}
@@ -82,11 +134,11 @@ export default function Projects() {
                                 alignItems: 'center',
                                 height: 50,
                                 pl: 2,
-                                bgcolor: 'red',
                             }}
                         >
                             <Typography>{images[activeStep].label}</Typography>
                         </Paper>
+
                         <AutoPlaySwipeableViews
 
                             axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
@@ -100,11 +152,16 @@ export default function Projects() {
                                         <Box
                                             component="img"
                                             sx={{
-                                                height: 500,
-                                                display: 'block',
+                                                height: {
+                                                    sm: '200px',
+                                                    md: '500px'
+
+                                                },
+                                                borderBottomLeftRadius: '15%',
+                                                WebkitBorderTopRightRadius: '15%',
+
                                                 maxWidth: '100%',
-                                                overflow: 'hidden',
-                                                width: '100%',
+                                                width: '100%'
                                             }}
                                             src={step.imgPath}
                                             alt={step.label}
@@ -113,45 +170,19 @@ export default function Projects() {
                                 </div>
                             ))}
                         </AutoPlaySwipeableViews>
-                        <MobileStepper
-                            steps={maxSteps}
-                            position="static"
-                            activeStep={activeStep}
-                            nextButton={
-                                <Button
-                                    size="small"
-                                    onClick={handleNext}
-                                    disabled={activeStep === maxSteps - 1}
-                                >
-                                    Next
-                                    {theme.direction === 'rtl' ? (
-                                        <KeyboardArrowLeft />
-                                    ) : (
-                                        <KeyboardArrowRight />
-                                    )}
-                                </Button>
-                            }
-                            backButton={
-                                <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-                                    {theme.direction === 'rtl' ? (
-                                        <KeyboardArrowRight />
-                                    ) : (
-                                        <KeyboardArrowLeft />
-                                    )}
-                                    Back
-                                </Button>
-                            }
-                        />
+
                     </Box>
                 </Container>
-                <Container>
-
-                </Container>
-
             </Container>
 
 
-        </Box>
+
+
+
+
+
+
+        </Box >
     )
 }
 

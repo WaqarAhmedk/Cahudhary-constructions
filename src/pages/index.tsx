@@ -5,6 +5,8 @@ import HeroSectiopn from './herosection';
 import ChooseUs from './choseus';
 import OurServices from './ourservices';
 import Projects from './projects';
+import VideoSection from './videosection';
+import Footer from './footer';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -17,6 +19,9 @@ export default function Home() {
       <ChooseUs />
       <OurServices />
       <Projects />
+      <VideoSection />
+      <Footer />
+
 
     </div>
   )
