@@ -11,6 +11,7 @@ import Image from 'next/image'
 export default function Footer() {
     return (<Box sx={{
         paddingTop: '30px',
+        color: 'white',
 
     }}>
 
@@ -61,11 +62,12 @@ export default function Footer() {
                             <TextField placeholder='Your Email' sx={{
                                 backgroundColor: 'gray',
                                 border: '1px solid white',
-                                borderRadius: '30px'
+                                borderRadius: '30px', marginBottom: '10px'
                             }} />
                             <Button variant='contained' sx={{
+
                                 height: '50px',
-                                backgroundColor: 'red', marginLeft: '20px'
+                                marginLeft: '20px'
                             }}>
                                 Contact us
                             </Button>
@@ -92,104 +94,112 @@ export default function Footer() {
 
 
                 </Box>
-            </Box>
-        </Container>
+            </Box >
+        </Container >
 
         <hr />
 
         <Container sx={{
-            display: 'flex',
+            display: {
+                xs: 'block',
+                sm: 'block',
+                md: 'flex'
+            },
+            justifyContent: 'center',
+            marginTop: '20px'
+
 
         }}>
             <Box sx={{
-                width: '20%'
+                display: 'flex',
+                justifyContent: 'space-between',
+                marginBottom: '20px',
+                width: '50%'
             }}>
-                <Typography>
-                    Chaudhary Const
-                </Typography>
-                <Typography>
-                    main road ratta  dadyal Azad Kashmir
-                </Typography>
-                <Typography>
-                    email@gmail.com
-                </Typography>
+                <Box sx={{
+                    width: '50%'
+                }}>
+                    <Typography>
+                        Chaudhary Const
+                    </Typography>
+                    <Typography>
+                        main road ratta  dadyal Azad Kashmir
+                    </Typography>
+                    <Typography>
+                        email@gmail.com
+                    </Typography>
+                </Box>
+                <Box sx={{
+                    width: '50%'
+                }}>
+                    <Typography>
+                        Platform
+                    </Typography>
+                    <Typography>
+                        analytics
+                    </Typography>
+                    <Typography>
+                        planning
+                    </Typography>
+                    <Typography>
+                        collabration
+                    </Typography>
+                    <Typography>
+                        data management
+                    </Typography>
+                </Box>
             </Box>
             <Box sx={{
-                width: '20%'
+                display: 'flex',
+                justifyContent: 'space-between',
+                marginBottom: '20px',
+                width: '50%'
+
             }}>
-                <Typography>
-                    Platform
-                </Typography>
-                <Typography>
-                    analytics
-                </Typography>
-                <Typography>
-                    planning
-                </Typography>
-                <Typography>
-                    collabration
-                </Typography>
-                <Typography>
-                    datamanagement
-                </Typography>
+                <Box sx={{
+                    width: '50%', marginRight: '10%'
+
+                }}>
+                    <Typography sx={{
+                        fontSize: '20px',
+                        fontWeight: 'bold'
+                    }}>
+                        Platform
+                    </Typography>
+                    <Typography>
+                        analytics
+                    </Typography>
+                    <Typography>
+                        planning
+                    </Typography>
+                    <Typography>
+                        collabration
+                    </Typography>
+                    <Typography>
+                        data management
+                    </Typography>
+                </Box>
+                <Box sx={{
+                    width: '50%'
+                }}>
+                    <Typography>
+                        Platform
+                    </Typography>
+                    <Typography>
+                        analytics
+                    </Typography>
+                    <Typography>
+                        planning
+                    </Typography>
+                    <Typography>
+                        collabration
+                    </Typography>
+                    <Typography>
+                        data management
+                    </Typography>
+                </Box>
             </Box>
-            <Box sx={{
-                width: '20%'
-            }}>
-                <Typography>
-                    Platform
-                </Typography>
-                <Typography>
-                    analytics
-                </Typography>
-                <Typography>
-                    planning
-                </Typography>
-                <Typography>
-                    collabration
-                </Typography>
-                <Typography>
-                    datamanagement
-                </Typography>
-            </Box>
-            <Box sx={{
-                width: '20%'
-            }}>
-                <Typography>
-                    Platform
-                </Typography>
-                <Typography>
-                    analytics
-                </Typography>
-                <Typography>
-                    planning
-                </Typography>
-                <Typography>
-                    collabration
-                </Typography>
-                <Typography>
-                    datamanagement
-                </Typography>
-            </Box>
-            <Box sx={{
-                width: '20%'
-            }}>
-                <Typography>
-                    Platform
-                </Typography>
-                <Typography>
-                    analytics
-                </Typography>
-                <Typography>
-                    planning
-                </Typography>
-                <Typography>
-                    collabration
-                </Typography>
-                <Typography>
-                    datamanagement
-                </Typography>
-            </Box>
+
         </Container>
-    </Box>)
+    </Box >)
 }
