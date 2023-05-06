@@ -1,5 +1,5 @@
 import { Avatar, Box, Container, Typography } from '@mui/material'
-import React from 'react';
+import React, { RefObject } from 'react';
 
 import s1 from '../../public/images/sss.jpeg'
 import Image from 'next/image';
@@ -31,7 +31,12 @@ let services = [{
     image: s1,
 
 }]
-export default function OurServices() {
+
+interface Servicesprops {
+    servicesref: RefObject<HTMLDivElement>;
+}
+
+const OurServices: React.FC<Servicesprops> = ({ servicesref }) => {
     return (
         <Box sx={{
             backgroundColor: '#F8F8F8',
@@ -39,7 +44,7 @@ export default function OurServices() {
 
         }}>
 
-            <Container >
+            <Container ref={servicesref}>
                 <Typography sx={{
                     fontSize: '40px',
                     fontWeight: 'bold',
@@ -179,3 +184,4 @@ export default function OurServices() {
         </Box >
     )
 }
+export default OurServices;

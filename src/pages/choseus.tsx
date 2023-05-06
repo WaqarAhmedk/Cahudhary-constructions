@@ -1,13 +1,16 @@
 import { Box, Container, Typography } from '@mui/material'
-import React from 'react'
+import React, { RefObject } from 'react'
+interface ChooseusProps {
+    featuresref: RefObject<HTMLDivElement>;
+}
 
-export default function ChooseUs() {
+const ChooseUs: React.FC<ChooseusProps> = ({ featuresref }) => {
     return (
         <Box sx={{
             backgroundColor: 'white',
             paddingTop: '50px',
             paddingBottom: '50px'
-        }} >
+        }} ref={featuresref} >
             <Container>
                 <Typography sx={{
                     fontSize: '40px',
@@ -164,3 +167,4 @@ export default function ChooseUs() {
         </Box >
     )
 }
+export default ChooseUs;

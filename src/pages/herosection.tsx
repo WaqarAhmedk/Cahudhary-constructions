@@ -3,7 +3,7 @@ import React from 'react';
 import HeroIMage from '../../public/images/herosection.webp'
 import Image from 'next/image';
 import { Roboto } from 'next/font/google';
-export default function HeroSectiopn() {
+export default function HeroSectiopn(props: any) {
     return (
         <Grid sx={{
             marginTop: '50px',

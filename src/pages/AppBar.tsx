@@ -11,9 +11,8 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-export default function NavBar() {
-    const pages = ['Products', 'Pricing', 'Blog'];
-    const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+export default function NavBar({ ScrolltoView }) {
+    const pages = ['Projects', 'Features', 'Services', 'Aboutus'];
 
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
     const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
@@ -46,7 +45,8 @@ export default function NavBar() {
             display: 'flex',
             borderBottom: '2px solid gray',
             position: 'relative'
-        }} >
+
+        }}  >
             <Toolbar>
                 <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                     <IconButton
@@ -78,8 +78,27 @@ export default function NavBar() {
                         }}
                     >
                         {pages.map((page) => (
-                            <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                <Typography textAlign="center">{page}</Typography>
+                            <MenuItem key={page} >
+                                <Typography
+
+                                    textAlign="center" onClick={() => {
+                                        if (page == 'Projects') {
+                                            ScrolltoView('projects');
+
+                                        } else if (page == 'Features') {
+                                            ScrolltoView('features')
+
+                                        } else if (page == 'Services') {
+                                            ScrolltoView('services')
+
+                                        } else if (page == 'Aboutus') {
+                                            ScrolltoView('aboutus')
+
+                                        }
+                                        handleCloseNavMenu()
+
+
+                                    }}>{page}</Typography>
                             </MenuItem>
                         ))}
                     </Menu>
@@ -92,10 +111,24 @@ export default function NavBar() {
                         justifyContent: 'Space-between',
                         width: '30%'
                     }}>
-                        <Typography color={'#BCC0C3'}>
-                            About
+                        <Typography sx={{
+                            cursor: 'pointer',
+                            ":hover": {
+                                color: 'blue'
+                            }
+                        }} color={'#BCC0C3'} onClick={() => {
+                            ScrolltoView('aboutus')
+                        }}>
+                            About us
                         </Typography>
-                        <Typography color={'#BCC0C3'}>
+                        <Typography sx={{
+                            cursor: 'pointer',
+                            ":hover": {
+                                color: 'blue'
+                            }
+                        }} color={'#BCC0C3'} onClick={() => {
+                            ScrolltoView('projects')
+                        }}>
                             Projects
                         </Typography>
                     </Container>
@@ -110,11 +143,25 @@ export default function NavBar() {
                         justifyContent: 'space-between',
                         width: '30%',
                     }}>
-                        <Typography color={'#BCC0C3'}>
+                        <Typography sx={{
+                            cursor: 'pointer',
+                            ":hover": {
+                                color: 'blue'
+                            }
+                        }} color={'#BCC0C3'} onClick={() => {
+                            ScrolltoView('features')
+                        }}>
                             Features
                         </Typography>
-                        <Typography color={'#BCC0C3'}>
-                            Resources
+                        <Typography sx={{
+                            cursor: 'pointer',
+                            ":hover": {
+                                color: 'blue'
+                            }
+                        }} color={'#BCC0C3'} onClick={() => {
+                            ScrolltoView('services')
+                        }}>
+                            Services
                         </Typography>
                     </Container>
                 </Container>
@@ -124,8 +171,13 @@ export default function NavBar() {
                     display: { xs: 'flex', sm: 'flex', md: 'none' }
                 }}>
                     <Image src={LogoImage} alt='chaudghary-construction logo' className='logoimg' />
-                    <Typography>
-                        Chaudhary Group
+                    <Typography sx={{
+                        cursor: 'pointer',
+                        ":hover": {
+                            color: 'blue'
+                        }
+                    }}>
+                        Chaudhary  Construction Group
                     </Typography>
                 </Container>
             </Toolbar>

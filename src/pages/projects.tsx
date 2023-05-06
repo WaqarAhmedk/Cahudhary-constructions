@@ -1,6 +1,6 @@
 import { Box, Container, Typography } from '@mui/material'
 import Image from 'next/image'
-import React from 'react'
+import React, { RefObject } from 'react'
 import { useTheme } from '@mui/material/styles';
 import MobileStepper from '@mui/material/MobileStepper';
 import Paper from '@mui/material/Paper';
@@ -38,8 +38,12 @@ const images = [
             'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
     },
 ];
+interface Projectprops {
+    projectsref: RefObject<HTMLDivElement>;
+}
 
-export default function Projects() {
+
+const Projects: React.FC<Projectprops> = ({ projectsref }) => {
 
     const theme = useTheme();
     const [activeStep, setActiveStep] = React.useState(0);
@@ -56,6 +60,7 @@ export default function Projects() {
         setActiveStep(step);
     };
 
+
     return (
         <Box sx={
             {
@@ -63,7 +68,7 @@ export default function Projects() {
                 position: 'relative',
                 paddingBottom: '30px'
             }
-        }>
+        } >
 
 
             <Container
@@ -123,7 +128,7 @@ export default function Projects() {
 
                 </Button>
 
-                <Container >
+                <Container ref={projectsref}>
 
                     <Box sx={{ maxWidth: '100%', flexGrow: 1, }}>
                         <Paper
@@ -189,3 +194,5 @@ export default function Projects() {
 
 
 
+
+export default Projects;
