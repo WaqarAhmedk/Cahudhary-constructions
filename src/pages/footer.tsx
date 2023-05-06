@@ -1,5 +1,5 @@
 import { Box, Button, Container, TextField, Typography } from '@mui/material'
-import React from 'react'
+import React, { RefObject } from 'react'
 
 import img1 from '../../public/images/fb.png'
 import img2 from '../../public/images/twitter.png'
@@ -7,8 +7,10 @@ import img3 from '../../public/images/whatsapp.png'
 import Image from 'next/image'
 
 
-
-export default function Footer() {
+interface footerprops {
+    aboutref: RefObject<HTMLDivElement>;
+}
+const Footer: React.FC<footerprops> = ({ aboutref }) => {
     return (<Box sx={{
         paddingTop: '30px',
         color: 'white',
@@ -18,7 +20,7 @@ export default function Footer() {
         <Container sx={{
             marginBottom: '20px'
         }}>
-            <Box sx={{
+            <Box ref={aboutref} sx={{
                 display: {
                     xs: 'block',
                     sm: 'flex',
@@ -213,3 +215,4 @@ export default function Footer() {
         </Container>
     </Box >)
 }
+export default Footer;

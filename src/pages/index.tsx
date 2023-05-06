@@ -35,8 +35,8 @@ export default function Home() {
       servicesref.current?.scrollIntoView({
         behavior: 'smooth'
       })
-    } else if (element === 'projects') {
-      projectsref.current?.scrollIntoView({
+    } else if (element === 'aboutus') {
+      aboutref.current?.scrollIntoView({
         behavior: 'smooth'
       })
     }
@@ -56,7 +56,7 @@ export default function Home() {
       <OurServices servicesref={servicesref} />
       <Projects projectsref={projectsref} />
       <VideoSection />
-      <Footer />
+      <Footer aboutref={aboutref} />
 
 
     </div>

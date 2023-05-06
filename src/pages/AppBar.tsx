@@ -11,7 +11,11 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-export default function NavBar({ ScrolltoView }) {
+
+interface Appbarprops {
+    ScrolltoView: (val: string) => void;
+}
+const NavBar: React.FC<Appbarprops> = ({ ScrolltoView }) => {
     const pages = ['Projects', 'Features', 'Services', 'Aboutus'];
 
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -184,3 +188,4 @@ export default function NavBar({ ScrolltoView }) {
 
         </AppBar>)
 }
+export default NavBar;
